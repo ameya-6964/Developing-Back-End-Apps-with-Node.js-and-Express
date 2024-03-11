@@ -1,1 +1,13 @@
-console.log("Hello World This Is Node.js Practice File")
+const express = require("express");
+const app = express();
+const PORT = 3000;
+
+app.get("/", (req, res) => {
+  res.json({
+    message: "Success",
+  });
+});
+
+app.listen(PORT, () => {
+  console.log(`Server Started On PORT ${PORT}`);
+});
